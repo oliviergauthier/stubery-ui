@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Optional } from '@angular/core';
+import {MdDialog, MdDialogRef} from '@angular/material';
 
 import { Application } from './services/applications/application'
 import { ApplicationsService } from './services/applications/applications.service'
+import { ApplicationDialogComponent } from './application-dialog/application-dialog.component'
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,7 @@ export class AppComponent implements OnInit {
 
   applications: Application[];
 
-  constructor(private _applicationsService: ApplicationsService) { }
+  constructor(private _applicationsService: ApplicationsService, private _dialog:MdDialog) { }
 
   getApplications(): void {
     this._applicationsService.getApplications().then(applications => this.applications = applications);
@@ -23,5 +25,19 @@ export class AppComponent implements OnInit {
     this.getApplications();
   }
 
+  onSelect(application:Application) : void {
+    console.debug("Application selected " + application.name);
+  }
+
+  onCreate() : void {
+    let dialogRef = this._dialog.open(ApplicationDialogComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.debug("Create application : " + result)
+    })
+    console.debug("Create application")
+  }
+
   title = 'app works!';
 }
+
+

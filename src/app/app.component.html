@@ -8,6 +8,19 @@
     <span class="app-toolbar-filler"></span>
 </md-toolbar>
 
-<h1>
-  {{title}}
-</h1>
+<div class="flex-container" 
+     fxLayout="row" 
+     fxLayoutWrap
+     fxLayoutAlign="start center">
+     <div *ngFor="let application of applications" >
+      <md-card  (click)="onSelect(application)" class="application-card">
+        {{application.name}}
+      </md-card>
+    </div>
+</div>
+  
+<span class="app-action" (click)="onCreate()">
+  <button md-fab >
+    <md-icon>add</md-icon>
+  </button>
+</span>
