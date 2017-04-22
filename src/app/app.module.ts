@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { Ng2LetterAvatar } from "ng2letteravatar/ng2letteravatar";
 
 import 'hammerjs';
 
@@ -15,11 +16,12 @@ import { ApplicationEntryComponent } from './application-entry/application-entry
 
 @NgModule({
   declarations: [
+    Ng2LetterAvatar,
     AppComponent,
     DashboardComponent,
     ApplicationDialogComponent,
     ApplicationDialogComponent,
-    ApplicationEntryComponent
+    ApplicationEntryComponent,
   ],
   imports: [
     BrowserModule,

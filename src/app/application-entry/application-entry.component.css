@@ -1,7 +1,20 @@
-.application-circle {
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-    background-color: blue
+.entry-container {
+	padding: 20px;
+    text-align: center;
 	/* width and height can be anything, as long as they're equal */
+}
+
+.entry-icon {
+    margin: 15px;
+    display: block;
+    cursor: pointer;
+    width: 150px;
+}
+
+.application-name {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    /*color: #303030*/
+    color:darkgrey
 }

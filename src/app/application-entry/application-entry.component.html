@@ -1,3 +1,12 @@
-<div class="application-circle">
-  {{firstLetter}}
+<div>
+  <div class="entry-container" >
+    <ng2-letter-avatar
+            class="entry-icon"
+            avatar-data='{{application.name}}'
+            avatar-shape='round'
+            avatar-height="100px"
+            avatar-width="100px"
+            avatar-custom-bg-color="{{application.color}}"></ng2-letter-avatar>
+    <span class="application-name">{{application.name}}</span>
+  </div>
 </div>
