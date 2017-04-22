@@ -13,9 +13,7 @@
      fxLayoutWrap
      fxLayoutAlign="start center">
      <div *ngFor="let application of applications" >
-      <md-card  (click)="onSelect(application)" class="application-card">
-        {{application.name}}
-      </md-card>
+       <application-entry [application]="application" (click)="onSelect(application)" ></application-entry>
     </div>
 </div>
   

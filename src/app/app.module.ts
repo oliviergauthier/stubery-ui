@@ -11,13 +11,15 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ApplicationDialogComponent } from './application-dialog/application-dialog.component';
+import { ApplicationEntryComponent } from './application-entry/application-entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     ApplicationDialogComponent,
-    ApplicationDialogComponent
+    ApplicationDialogComponent,
+    ApplicationEntryComponent
   ],
   imports: [
     BrowserModule,

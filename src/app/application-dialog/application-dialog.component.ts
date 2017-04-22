@@ -2,7 +2,7 @@ import { Component, OnInit, Optional } from '@angular/core';
 import {MdDialog, MdDialogRef, MdDialogConfig, MaterialModule} from '@angular/material';
 
 @Component({
-  selector: 'app-application-dialog',
+  selector: 'application-dialog',
   templateUrl: './application-dialog.component.html',
   styleUrls: ['./application-dialog.component.css']
 })
