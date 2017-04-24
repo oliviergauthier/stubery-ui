@@ -1,5 +1,6 @@
 import { Component, OnInit, Optional } from '@angular/core';
 import {MdDialog, MdDialogRef, MdDialogConfig, MaterialModule} from '@angular/material';
+import {ApplicationsService} from '../services/applications/applications.service';
 
 @Component({
   selector: 'application-dialog',
@@ -8,14 +9,20 @@ import {MdDialog, MdDialogRef, MdDialogConfig, MaterialModule} from '@angular/ma
 })
 export class ApplicationDialogComponent {
 
-  constructor(public dialog: MdDialog, @Optional() public dialogRef: MdDialogRef<ApplicationDialogComponent>) { }
+  constructor(public dialog: MdDialog, 
+              @Optional() public dialogRef: MdDialogRef<ApplicationDialogComponent>,
+              private applicationService : ApplicationsService) { }
+
+  appName : string;
 
   onCancel(result) : void {
     this.dialogRef.close()
   }
 
-  onCreate(result) : void {
+  onCreate(appName) : void {
     this.dialogRef.close()
+    this.applicationService.createApplication(appName);
+    console.debug('Application name : ' + appName)
   }
 
 }
