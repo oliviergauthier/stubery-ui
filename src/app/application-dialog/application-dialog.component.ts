@@ -5,7 +5,8 @@ import {ApplicationsService} from '../services/applications/applications.service
 @Component({
   selector: 'application-dialog',
   templateUrl: './application-dialog.component.html',
-  styleUrls: ['./application-dialog.component.css']
+  styleUrls: ['./application-dialog.component.css'],
+  providers: [ApplicationsService]
 })
 export class ApplicationDialogComponent {
 
