@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ApplicationDialogComponent } from './application-dialog/application-dialog.component';
 import { ApplicationEntryComponent } from './application-entry/application-entry.component';
+import { ApplicationsService } from './services/applications/applications.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { ApplicationEntryComponent } from './application-entry/application-entry
     MaterialModule.forRoot(),
     FlexLayoutModule,
   ],
-  providers: [],
+  providers: [ApplicationsService],
   entryComponents : [ApplicationDialogComponent],
   bootstrap: [AppComponent]
 })

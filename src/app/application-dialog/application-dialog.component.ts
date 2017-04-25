@@ -6,7 +6,6 @@ import {ApplicationsService} from '../services/applications/applications.service
   selector: 'application-dialog',
   templateUrl: './application-dialog.component.html',
   styleUrls: ['./application-dialog.component.css'],
-  providers: [ApplicationsService]
 })
 export class ApplicationDialogComponent {
 
@@ -23,7 +22,7 @@ export class ApplicationDialogComponent {
   onCreate(appName) : void {
     this.dialogRef.close()
     this.applicationService.createApplication(appName);
-    console.debug('Application name : ' + appName)
+    console.debug('Application Created with name : ' + appName)
   }
 
 }
