@@ -16,13 +16,15 @@ export class AppComponent implements OnInit {
   applications: Application[];
 
   constructor(private _applicationsService: ApplicationsService, private _dialog:MdDialog) {
-    _applicationsService.applicationsChanged.subscribe(
-      apps => { this.applications = apps }
+    _applicationsService.applications$.subscribe(
+      apps => {
+        this.applications = apps
+      }
     );
   }
 
   getApplications(): void {
-    this._applicationsService.getApplications().then(apps => this.applications = apps);
+    this._applicationsService.getApplications().then(applications => this.applications = applications);
   }
 
   ngOnInit(): void {
