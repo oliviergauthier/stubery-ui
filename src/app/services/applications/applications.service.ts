@@ -8,9 +8,9 @@ import { APPLICATIONS } from './mock-applications';
 export class ApplicationsService {
 
   private _currentApplications : Application[] = APPLICATIONS;
-  private _applicationsSource = new Subject<Application[]>();
+  private _applicationsChangedSource = new Subject<Application[]>();
 
-  applications$ = this._applicationsSource.asObservable();
+  applicationsChanged = this._applicationsChangedSource.asObservable();
 
   public getApplications() : Promise<Application[]> {
     return Promise.resolve(Array.from(this._currentApplications));
@@ -20,7 +20,7 @@ export class ApplicationsService {
     let app : Application = { id: 1, name:name, color:"#a094e7", icon: null };
     
     this._currentApplications.push(app);
-    this._applicationsSource.next(Array.from(this._currentApplications));
+    this._applicationsChangedSource.next(Array.from(this._currentApplications));
 
     return app;
   }
