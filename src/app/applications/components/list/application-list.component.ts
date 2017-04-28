@@ -1,8 +1,8 @@
 import { Component, OnInit, Optional } from '@angular/core';
 import {MdDialog, MdDialogRef} from '@angular/material';
 
-import { Application } from '../../services/applications/application'
-import { ApplicationsService } from '../../services/applications/applications.service'
+import { Application } from '../../services/application'
+import { ApplicationsService } from '../../services/applications.service'
 import { ApplicationDialogComponent } from '../creation-dialog/application-dialog.component'
 import { ApplicationEntryComponent } from '../entry/application-entry.component'
 

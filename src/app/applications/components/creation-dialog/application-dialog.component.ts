@@ -1,6 +1,6 @@
 import { Component, OnInit, Optional } from '@angular/core';
 import {MdDialog, MdDialogRef, MdDialogConfig, MaterialModule} from '@angular/material';
-import {ApplicationsService} from '../../services/applications/applications.service';
+import {ApplicationsService} from '../../services/applications.service';
 
 @Component({
   selector: 'application-dialog',

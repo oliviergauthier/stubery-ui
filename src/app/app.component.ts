@@ -1,10 +1,10 @@
 import { Component, OnInit, Optional } from '@angular/core';
-import {MdDialog, MdDialogRef} from '@angular/material';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
-import { Application } from './services/applications/application'
-import { ApplicationsService } from './services/applications/applications.service'
-import { ApplicationDialogComponent } from './applications/creation-dialog/application-dialog.component'
-import { ApplicationEntryComponent } from './applications/entry/application-entry.component'
+import { Application } from './applications/services/application'
+import { ApplicationsService } from './applications/services/applications.service'
+import { ApplicationDialogComponent } from './applications/components/creation-dialog/application-dialog.component'
+import { ApplicationEntryComponent } from './applications/components/entry/application-entry.component'
 
 @Component({
   selector: 'app-root',

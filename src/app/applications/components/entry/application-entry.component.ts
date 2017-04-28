@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Application } from '../../services/applications/application'
+import { Application } from '../../services/application'
 
 @Component({
   selector: 'application-entry',
