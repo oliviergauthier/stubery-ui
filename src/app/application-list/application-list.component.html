@@ -1,0 +1,14 @@
+<div class="flex-container" 
+     fxLayout="row" 
+     fxLayoutWrap
+     fxLayoutAlign="start center">
+     <div *ngFor="let application of applications" >
+       <application-entry [application]="application" (click)="onSelect(application)" ></application-entry>
+    </div>
+</div>
+  
+<span class="app-action" (click)="onCreate()">
+  <button md-fab >
+    <md-icon>add</md-icon>
+  </button>
+</span>
