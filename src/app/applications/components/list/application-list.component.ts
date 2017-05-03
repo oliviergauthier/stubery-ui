@@ -1,5 +1,6 @@
 import { Component, OnInit, Optional } from '@angular/core';
-import {MdDialog, MdDialogRef} from '@angular/material';
+import { MdDialog, MdDialogRef } from '@angular/material';
+import { Router } from '@angular/router';
 
 import { Application } from '../../services/application'
 import { ApplicationsService } from '../../services/applications.service'
@@ -15,7 +16,7 @@ export class ApplicationListComponent implements OnInit {
 
    applications: Application[];
 
-  constructor(private _applicationsService: ApplicationsService, private _dialog:MdDialog) {
+  constructor(private _applicationsService: ApplicationsService, private _dialog:MdDialog, private _router:Router) {
     _applicationsService.applications$.subscribe(
       apps => {
         this.applications = apps
@@ -32,7 +33,7 @@ export class ApplicationListComponent implements OnInit {
   }
 
   onSelect(application:Application) : void {
-    console.debug("Application selected " + application.name);
+    this._router.navigate(['/application'], application.id);
   }
 
   onCreate() : void {
