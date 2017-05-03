@@ -8,15 +8,18 @@ import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
 import { ApplicationModule } from './applications/application.module'
+import { EntryPointsModule } from './entry-points/entry-points.module'
 import { AppRoutingModule } from './app-routing.module'
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EntryPointsComponent } from './entry-points/components/list/entry-points.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    EntryPointsComponent,
   ],
   imports: [
     BrowserModule,
