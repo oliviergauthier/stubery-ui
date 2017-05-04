@@ -5,7 +5,7 @@ import { ApplicationDetailComponent } from './components/detail/application-deta
 import { ApplicationListComponent } from './components/list/application-list.component'
 
 const appRoutes: Routes = [
-  // { path: 'application/:id', component: ApplicationDetailComponent  },
+  { path: 'application/:id', component: ApplicationDetailComponent  },
   { path: 'applications', component: ApplicationListComponent }
 ];
 

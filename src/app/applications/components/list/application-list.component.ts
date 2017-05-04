@@ -33,7 +33,7 @@ export class ApplicationListComponent implements OnInit {
   }
 
   onSelect(application:Application) : void {
-    this._router.navigate(['/application'], application.id);
+    this._router.navigate(['/application/entry']);
   }
 
   onCreate() : void {

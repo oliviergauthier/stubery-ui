@@ -13,13 +13,11 @@ import { AppRoutingModule } from './app-routing.module'
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { EntryPointsComponent } from './entry-points/components/list/entry-points.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    EntryPointsComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +25,7 @@ import { EntryPointsComponent } from './entry-points/components/list/entry-point
     BrowserAnimationsModule,
     MaterialModule.forRoot(),
     ApplicationModule,
+    EntryPointsModule,
     AppRoutingModule,
   ],
   bootstrap: [AppComponent]
